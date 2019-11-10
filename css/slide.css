@@ -1,0 +1,62 @@
+﻿@charset "utf-8";
+
+.container{
+	width: 90%;
+	height:96vh;
+	display: flex;
+	box-sizing: border-box;
+	margin: auto;
+}
+.box {
+  flex: 1;
+  overflow: hidden;
+  transition: .5s;
+  margin: 0 1%;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+  line-height: 0;
+  position: relative;
+  color: aliceblue;
+}
+.box > img {
+  width: 200%;
+  height: calc(100%);
+  -o-object-fit: none;
+     object-fit: none;
+  transition: .5s;
+}
+
+.box>.info{
+	display: none;
+	width:10%;
+	height: 100%;
+	position: absolute;
+	top:67%;
+    right:3%;
+}
+.box p{
+	font-family: Helvetica Regular,sans-serif;
+	font-size:2.6rem;
+	line-height:3.5rem;
+	font-weight: bolder;
+}
+
+.box:hover {
+  flex: 1 1 80%;
+	
+}
+@-webkit-keyframes fadenum{ /*设置内容由隐藏变为显示*/
+
+    0%{opacity: 0;}
+
+    100%{opacity: 1;}
+
+}
+.box:hover>.info{
+	display: block;	
+	-webkit-animation:fadenum 1.5s linear;
+}
+
+.box:hover > img {
+  width: 100%;
+  height: 100%;
+}
