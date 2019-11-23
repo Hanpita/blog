@@ -29,7 +29,7 @@ body {
 	}
 	.third{
 		height:450px;
-		background-color:green;
+		background-color:rgba(121,0,231,1.00);
 		background-size:contain;
 		background-image: url(../image/korea/00.jpg);
 	}
