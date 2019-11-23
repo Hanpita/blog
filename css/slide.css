@@ -1,11 +1,11 @@
 ﻿@charset "utf-8";
 
 .container{
-	width: 90%;
-	height:96vh;
-	display: flex;
+  width: 95%;
+	height:94%;
+  display: flex;
 	box-sizing: border-box;
-	margin: auto;
+  margin:0 auto;
 }
 .box {
   flex: 1;
@@ -31,7 +31,7 @@
 	height: 100%;
 	position: absolute;
 	top:67%;
-    right:3%;
+  right:3%;
 }
 .box p{
 	font-family: Helvetica Regular,sans-serif;
