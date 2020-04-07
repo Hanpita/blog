@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html>
 <head>
 <meta charset="utf-8">
@@ -20,9 +20,15 @@
 <script type="text/javascript">
 	$(".box").on("mouseover",function(){
 		$(this).children(".info").fadeIn(1000);
-	});
+    });
+    $(document).on("scroll", function () {
+        if ($(document).scrollTop() > 20) {
+            $("nav").addClass("scrolled");
+        } else {
+            $("nav").removeClass("scrolled");
+        }
+    });
 </script>
-
 
 
 <style type="text/css">
@@ -34,302 +40,297 @@
 </head>
 
 <body style="overflow-x:hidden">
-<div id="nav">
-	<ul>
-		<li><a href="index.html">HOME</a>
-		<ul>
-				<li><a href="index.html#p">photo</a></li>
-				<li><a href="index.html#v">view</a></li>
-		</ul>
-		</li>
-		<li><a href="JAPAN.html">Japan</a>
-		<ul>
-				<li><a href="JAPAN.html#h">location</a></li>
-				<li><a href="JAPAN.html#f">food<br>&drink</a></li>
-				<li><a href="JAPAN.html#p">puzzle</a></li>
-		</ul>
-		</li>
-		<li><a href="zhoushan.html">Zhoushan</a>
-		<ul>
-				<li><a href="zhoushan.html#m">view</a></li>
-				<li><a href="zhoushan.html#g">vlog</a></li>
-		</ul>
-		</li>
-		<li><a href="korea.html">South Korea</a>
-			<ul>
-					<li><a href="korea.html#l">location</a></li>
-					<li><a href="korea.html#f">food</a></li>
-			</ul>
-		</li>
-	</ul>
-</div>
-<div id="socials">
-		<ul>
-			<a href="#" target=""><li class="fa fa-2x">&#xf16d</li></a>
-			<a href="#" target=""><li class="fa fa-2x">&#xf099</li></a>
-			<a href="#" target=""><li class="fa fa-2x">&#xf166</li></a>
-			<a href="#" target=""><li class="fa fa-2x">&#xf082</li></a>
-		</ul>
-</div>
-    
+    <nav>
+        <div id="nav-info">
+            <ul>
+                <li>
+                    <a class="hover_color" href="index.html">HOME</a>
+                    <ul>
+                        <li><a href="index.html#p">photo</a></li>
+                        <li><a href="index.html#v">view</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="hover_color" href="JAPAN.html">Japan</a>
+                    <ul>
+                        <li><a href="JAPAN.html#h">location</a></li>
+                        <li><a href="JAPAN.html#f">food<br>&drink</a></li>
+                        <li><a href="JAPAN.html#p">puzzle</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="hover_color" href="zhoushan.html">Zhoushan</a>
+                    <ul>
+                        <li><a href="zhoushan.html#m">view</a></li>
+                        <li><a href="zhoushan.html#g">vlog</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="hover_color" href="korea.html" style="color:white">South Korea</a>
+                    <ul>
+                        <li><a href="korea.html#l">location</a></li>
+                        <li><a href="korea.html#f">food</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div id="socials">
+        <ul>
+            <a href="#" target=""><li class="fa fa-lg">&#xf16d</li></a>
+            <a href="#" target=""><li class="fa fa-lg">&#xf099</li></a>
+            <a href="#" target=""><li class="fa fa-lg">&#xf166</li></a>
+            <a href="#" target=""><li class="fa fa-lg">&#xf082</li></a>
+        </ul>
+    </div>
 
-<div class="content">
-    <div id="first">
-			<div class="container">
-					<div class="box">
-						<img src="image/korea/8.jpg" alt="">
-						<div class="info" ><p>牛<br>岛</p></div>
-					</div>
-					
-					<div class="box">
-						<img  src="image/korea/5.jpg" alt="">
-						<div class="info" >
-						    <p id="content2">济<br>州<br>岛</p>
-					    </div>
-					</div>
-					<div class="box">
-						<img  src="image/korea/01.jpg" alt="">
-						<div class="info" >
-							<p id="content3">南<br>部</p>
-						</div>
-					</div>
-			</div>
-	</div>
 
-<a name="l"></a>
-<div class="second">
-	<p class="medium">《LOCATION》</p>
-	<div id="mapcon">
-	<img id="map" src="image/korea/map.jpg"  alt=""/>
-	<div id="map2">
-		<p class="small">韩国地理位置处在亚洲大陆东北部朝鲜半岛的南段，三面环海。韩国是个多山的国家，国土面积的三分之二为山地。纵贯韩国东海岸的太白山脉是韩国地质的脊梁。</p>
-		<p class="small">South Korea is located in the southern section of the Korean Peninsula in the northeastern part of the Asian continent, surrounded by the sea on three sides. South Korea is a mountainous country with two-thirds of the country's land area. The Taibai Mountains running through the east coast of Korea are the backbone of Korean geology.</p>
-	</div>
-	</div>
-</div>
-<div id="photo1"><a href="#" target="_blank"></a></div>
+    <div class="content">
+        <div id="first">
+            <div class="container">
+                <div class="box">
+                    <img src="image/korea/8.jpg" alt="">
+                    <div class="info"><p>牛<br>岛</p></div>
+                </div>
 
-<a name="f"></a>
-<div class="second2">
-	<p class="medium">《FOOD》</p>
-	<div id="food0" class="bg1">
-	<p id="show" class="vert">濟<br>州<br>島</p>
-	</div>
-	<script type="text/javascript">
-		$(document).ready(function(){
-		  $("#show").mouseover(function(){
-			$('#food0').removeClass('bg1').addClass('bg2');
-			$('#show').css("opacity","0.8");
-		  });
-		  $("#show").mouseout(function(){
-			$('#food0').removeClass('bg2').addClass('bg1');
-			$('#show').css("opacity","1");
-		  });
-		});
-	</script>
-	<div class="con">
-			<a class="card" href="#!">
-			  <div class="front" style="background-image: url(image/korea/food/1.jpg);">
-				<p>보쌈<br>生菜包饭</p>
-			  </div>
-			  <div class="back">
-				<div>
-					<p><b>보쌈<br>生菜包饭</b></p>
-				  <p>韩国生菜包饭是一道简单的家常菜，主料是猪肉片、大蒜、生菜、韩国豆瓣酱、干辣椒、芝麻、孜然。</p>
-				</div>
-			  </div></a>
-			  
-			<a class="card" href="#!">
-			  <div class="front" style="background-image: url(image/korea/food/2.jpg);">
-				<p>삼겹살<br>烤肉</p>
-			  </div>
-			  <div class="back">
-				<div>
-					<p><b>삼겹살<br>烤肉</b></p>
-				  <p>韩国烤肉是韩国料理中的一道大菜。韩国烤肉主要以牛肉为主,但是尤以烤牛里脊和烤牛排最有名，因为其肉质最鲜美爽嫩。</p>
-				</div>
-			  </div></a>
-			  
-			<a class="card" href="#!">
-			  <div class="front" style="background-image: url(image/korea/food/3.jpg);">
-				<p>냉면<br>冷面</p>
-			  </div>
-			  <div class="back">
-				<div>
-					<p><b>냉면<br>冷面</b></p>
-				  <p>韩国冷面的官方名称为朝鲜冷面，是朝鲜民族传统美食之一。其中以平壤“水冷面”和咸兴“拌冷面”最为著名。</p>
-				</div>
-			  </div></a>
-			  
-			<a class="card" href="#!">
-			  <div class="front" style="background-image: url(image/korea/food/4.jpg);">
-				<p>흑미밥<br>紫米饭</p>
-			  </div>
-			  <div class="back">
-				<div>
-					<p><b>흑미밥<br>紫米饭</b></p>
-				  <p>韩国紫米饭是一道美味的菜肴。紫米滋阴补肾、明目补血，常为韩餐的上选主食。</p>
-				</div>
-			  </div></a>
-			  
-			  <a class="card" href="#!">
-			  <div class="front" style="background-image: url(image/korea/food/5.jpg);">
-				<p>어묵탕<br>鱼丸汤</p>
-			  </div>
-			  <div class="back">
-				<div>
-					<p><b>어묵탕<br>鱼丸汤</b></p>
-				  <p>韩国特色小吃之一，将碾碎的鱼肉做成鱼丸，加点萝卜、葱、海带煮成的清汤，老少皆宜。</p>
-				</div>
-			  </div></a>
-			  
-			  <a class="card" href="#!">
-			  <div class="front" style="background-image: url(image/korea/food/12.jpg);">
-				<p>불닭발<br>辣酱鸡</p>
-			  </div>
-			  <div class="back">
-				<div>
-				  <p><b>불닭발<br>辣酱鸡</b></p>
-				  <p>当韩国辣椒酱的香与辣充分融入鸡肉，加之吸收了芹菜和洋葱的香气，撒上芝士或辣酱，使之更加诱人。</p>
-				</div>
-			  </div>
-			  </a>	
-			  
-			  <a class="card" href="#!">
-				<div class="front" style="background-image: url(image/korea/food/9.jpg);">
-				  <p>치킨<br>炸鸡</p>
-				</div>
-				<div class="back">
-				  <div>
-					<p><b>치킨<br>炸鸡</b></p>
-					<p>韩国炸鸡又叫韩式炸鸡，和台湾大鸡排炸鸡最大的区别在于烹饪方法。韩国炸鸡一般外面都加甜辣酱。</p>
-				  </div>
-				</div>
-				</a>	
+                <div class="box">
+                    <img src="image/korea/5.jpg" alt="">
+                    <div class="info">
+                        <p id="content2">济<br>州<br>岛</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="image/korea/01.jpg" alt="">
+                    <div class="info">
+                        <p id="content3">南<br>部</p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-				<a class="card" href="#!">
-			  <div class="front" style="background-image: url(image/korea/food/8.jpg);">
-				<p>떡볶이<br>炒年糕</p>
-			  </div>
-			  <div class="back">
-				<div>
-					<p><b>떡볶이<br>炒年糕</b></p>
-				  <p>韩国炒年糕是一种休闲小吃，又称打糕条，流行于朝鲜半岛，因其诱人的味道而广受欢迎。</p>
-				</div>
-			  </div>
-			  </a>
-			  
-			  <a class="card" href="#!">
-				<div class="front" style="background-image: url(image/korea/food/16.jpg);">
-					<p>제주감귤<br>济州柑橘</p>
-				</div>
-				<div class="back">
-				  <div>
-					<p><b>제주감귤<br>济州柑橘</b></p>
-					<p>济州柑橘，又名汉拿峰柑橘，济州岛的特产。因其突出的外形很像济州岛汉拿山峰，故得名“汉拿山”。其个头大，糖分高，果肉鲜嫩。</p>
-				  </div>
-				</div>
-				</a>	
-				
-			   <a class="card" href="#!">
-					<div class="front" style="background-image: url(image/korea/food/10.jpg);">
-					  <p>된장찌개<br>大酱汤</p>
-					</div>
-					<div class="back">
-					  <div>
-						<p><b>된장찌개<br>大酱汤</b></p>
-						<p>韩国大酱汤是韩国特色料理，韩式大酱汤有热汤、凉汤两种。大酱的脂肪含量少，热量低，用来做大酱汤多食易有饱腹感。</p>
-					  </div>
-					</div>
-				</a>	
+        <a name="l"></a>
+        <div class="second">
+            <p class="medium">《LOCATION》</p>
+            <div id="mapcon">
+                <img id="map" src="image/korea/map.jpg" alt="" />
+                <div id="map2">
+                    <p class="small">韩国地理位置处在亚洲大陆东北部朝鲜半岛的南段，三面环海。韩国是个多山的国家，国土面积的三分之二为山地。纵贯韩国东海岸的太白山脉是韩国地质的脊梁。</p>
+                    <p class="small">South Korea is located in the southern section of the Korean Peninsula in the northeastern part of the Asian continent, surrounded by the sea on three sides. South Korea is a mountainous country with two-thirds of the country's land area. The Taibai Mountains running through the east coast of Korea are the backbone of Korean geology.</p>
+                </div>
+            </div>
+        </div>
+        <div id="photo1"><a href="#" target="_blank"></a></div>
 
-				<a class="card" href="#!">
-					<div class="front" style="background-image: url(image/korea/food/11.jpg);">
-					  <p>부추전<br>韭菜饼</p>
-					</div>
-					<div class="back">
-					  <div>
-						<p><b>부추전<br>韭菜饼</b></p>
-						<p>韩式韭菜饼是传统名小吃，主料为韭菜。新鲜采摘的韭菜，经清洗，切碎，与面粉、水、调料一起搅拌，煎至两面金黄</p>
-					  </div>
-					</div>
-					</a>
-					
-				<a class="card" href="#!">
-						<div class="front" style="background-image: url(image/korea/food/14.jpg);">
-						  <p>족발<br>猪蹄</p>
-						</div>
-						<div class="back">
-						  <div>
-							<p><b>족발<br>猪蹄</b></p>
-							<p>酱猪蹄是韩国最受欢迎的夜宵之一，因其富含胶原蛋白还兼具补虚养身的功效深受广大群众的喜爱。经过高汤，加入药材、香料和猪蹄一起熬煮。</p>
-						  </div>
-						</div>
-				</a>
-				<a class="card" href="#!">
-					<div class="front" style="background-image: url(image/korea/food/13.jpg);">
-					  <p>김밥<br>紫菜卷饭</p>
-					</div>
-					<div class="back">
-					  <div>
-						<p><b>김밥<br>紫菜卷饭</b></p>
-						<p>韩国紫菜包饭是由日本寿司演变而来的一种包饭。它的食材包括米饭、紫菜、鸡蛋、胡萝卜、火腿肠、菠菜、猪肉松。</p>
-					  </div>
-					</div>
-			    </a>
-			    <a class="card" href="#!">
-				<div class="front" style="background-image: url(image/korea/food/17.jpg);">
-				  <p>비빔밥<br>拌饭</p>
-				</div>
-				<div class="back">
-				  <div>
-					<p><b>비빔밥<br>拌饭</b></p>
-					<p>韩国拌饭，蕴涵着“五行五脏五色”的原理。其中以“全州拌饭”、“晋州拌饭”最为有名。全州拌饭用的是全罗道的淳昌糯米辣椒酱,品质很高。</p>
-				  </div>
-				</div>
-				</a>
-				
-				<a class="card" href="#!">
-					<div class="front" style="background-image: url(image/korea/food/6.jpg);">
-					  <p>김치<br>泡菜</p>
-					</div>
-					<div class="back">
-					  <div>
-						<p><b>김치<br>泡菜</b></p>
-						<p>“韩国泡菜”是朝鲜半岛一种以蔬菜为主要原料的发酵食品。韩国泡菜食后五味俱全，可佐饭，可佐酒，易消化，爽胃口。</p>
-					  </div>
-					</div>
-				</a>
-				<a class="card" href="#!">
-					<div class="front" style="background-image: url(image/korea/food/15.jpg);">
-					  <p>순대<br>米肠</p>
-					</div>
-					<div class="back">
-					  <div>
-						<p><b>순대<br>米肠</b></p>
-						<p>韩国米肠是朝鲜民族传统特色美食，由洗干净的猪肠 、绿豆芽、 菜帮、 糯米 、猪血拌制作而成，味道咸鲜，好吃而不油腻，起源于朝鲜半岛。</p>
-					  </div>
-					</div>
-			    </a>
-		
-		  </div>
-  
+        <a name="f"></a>
+        <div class="second2">
+            <p class="medium">《FOOD》</p>
+            <div id="food0">
+                <p id="show" class="vert">濟<br>州<br>島</p>
+                <div class="bg1"><p id="show" class="vert">濟<br>州<br>島</p></div>
+            </div>
+            <div class="con">
+                <a class="card" href="#!">
+                    <div class="front" style="background-image: url(image/korea/food/1.jpg);">
+                        <p>보쌈<br>生菜包饭</p>
+                    </div>
+                    <div class="back">
+                        <div>
+                            <p><b>보쌈<br>生菜包饭</b></p>
+                            <p>韩国生菜包饭是一道简单的家常菜，主料是猪肉片、大蒜、生菜、韩国豆瓣酱、干辣椒、芝麻、孜然。</p>
+                        </div>
+                    </div>
+                </a>
 
-	</div>
+                <a class="card" href="#!">
+                    <div class="front" style="background-image: url(image/korea/food/2.jpg);">
+                        <p>삼겹살<br>烤肉</p>
+                    </div>
+                    <div class="back">
+                        <div>
+                            <p><b>삼겹살<br>烤肉</b></p>
+                            <p>韩国烤肉是韩国料理中的一道大菜。韩国烤肉主要以牛肉为主,但是尤以烤牛里脊和烤牛排最有名，因为其肉质最鲜美爽嫩。</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a class="card" href="#!">
+                    <div class="front" style="background-image: url(image/korea/food/3.jpg);">
+                        <p>냉면<br>冷面</p>
+                    </div>
+                    <div class="back">
+                        <div>
+                            <p><b>냉면<br>冷面</b></p>
+                            <p>韩国冷面的官方名称为朝鲜冷面，是朝鲜民族传统美食之一。其中以平壤“水冷面”和咸兴“拌冷面”最为著名。</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a class="card" href="#!">
+                    <div class="front" style="background-image: url(image/korea/food/4.jpg);">
+                        <p>흑미밥<br>紫米饭</p>
+                    </div>
+                    <div class="back">
+                        <div>
+                            <p><b>흑미밥<br>紫米饭</b></p>
+                            <p>韩国紫米饭是一道美味的菜肴。紫米滋阴补肾、明目补血，常为韩餐的上选主食。</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a class="card" href="#!">
+                    <div class="front" style="background-image: url(image/korea/food/5.jpg);">
+                        <p>어묵탕<br>鱼丸汤</p>
+                    </div>
+                    <div class="back">
+                        <div>
+                            <p><b>어묵탕<br>鱼丸汤</b></p>
+                            <p>韩国特色小吃之一，将碾碎的鱼肉做成鱼丸，加点萝卜、葱、海带煮成的清汤，老少皆宜。</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a class="card" href="#!">
+                    <div class="front" style="background-image: url(image/korea/food/12.jpg);">
+                        <p>불닭발<br>辣酱鸡</p>
+                    </div>
+                    <div class="back">
+                        <div>
+                            <p><b>불닭발<br>辣酱鸡</b></p>
+                            <p>当韩国辣椒酱的香与辣充分融入鸡肉，加之吸收了芹菜和洋葱的香气，撒上芝士或辣酱，使之更加诱人。</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a class="card" href="#!">
+                    <div class="front" style="background-image: url(image/korea/food/9.jpg);">
+                        <p>치킨<br>炸鸡</p>
+                    </div>
+                    <div class="back">
+                        <div>
+                            <p><b>치킨<br>炸鸡</b></p>
+                            <p>韩国炸鸡又叫韩式炸鸡，和台湾大鸡排炸鸡最大的区别在于烹饪方法。韩国炸鸡一般外面都加甜辣酱。</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a class="card" href="#!">
+                    <div class="front" style="background-image: url(image/korea/food/8.jpg);">
+                        <p>떡볶이<br>炒年糕</p>
+                    </div>
+                    <div class="back">
+                        <div>
+                            <p><b>떡볶이<br>炒年糕</b></p>
+                            <p>韩国炒年糕是一种休闲小吃，又称打糕条，流行于朝鲜半岛，因其诱人的味道而广受欢迎。</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a class="card" href="#!">
+                    <div class="front" style="background-image: url(image/korea/food/16.jpg);">
+                        <p>제주감귤<br>济州柑橘</p>
+                    </div>
+                    <div class="back">
+                        <div>
+                            <p><b>제주감귤<br>济州柑橘</b></p>
+                            <p>济州柑橘，又名汉拿峰柑橘，济州岛的特产。因其突出的外形很像济州岛汉拿山峰，故得名“汉拿山”。其个头大，糖分高，果肉鲜嫩。</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a class="card" href="#!">
+                    <div class="front" style="background-image: url(image/korea/food/10.jpg);">
+                        <p>된장찌개<br>大酱汤</p>
+                    </div>
+                    <div class="back">
+                        <div>
+                            <p><b>된장찌개<br>大酱汤</b></p>
+                            <p>韩国大酱汤是韩国特色料理，韩式大酱汤有热汤、凉汤两种。大酱的脂肪含量少，热量低，用来做大酱汤多食易有饱腹感。</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a class="card" href="#!">
+                    <div class="front" style="background-image: url(image/korea/food/11.jpg);">
+                        <p>부추전<br>韭菜饼</p>
+                    </div>
+                    <div class="back">
+                        <div>
+                            <p><b>부추전<br>韭菜饼</b></p>
+                            <p>韩式韭菜饼是传统名小吃，主料为韭菜。新鲜采摘的韭菜，经清洗，切碎，与面粉、水、调料一起搅拌，煎至两面金黄</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a class="card" href="#!">
+                    <div class="front" style="background-image: url(image/korea/food/14.jpg);">
+                        <p>족발<br>猪蹄</p>
+                    </div>
+                    <div class="back">
+                        <div>
+                            <p><b>족발<br>猪蹄</b></p>
+                            <p>酱猪蹄是韩国最受欢迎的夜宵之一，因其富含胶原蛋白还兼具补虚养身的功效深受广大群众的喜爱。经过高汤，加入药材、香料和猪蹄一起熬煮。</p>
+                        </div>
+                    </div>
+                </a>
+                <a class="card" href="#!">
+                    <div class="front" style="background-image: url(image/korea/food/13.jpg);">
+                        <p>김밥<br>紫菜卷饭</p>
+                    </div>
+                    <div class="back">
+                        <div>
+                            <p><b>김밥<br>紫菜卷饭</b></p>
+                            <p>韩国紫菜包饭是由日本寿司演变而来的一种包饭。它的食材包括米饭、紫菜、鸡蛋、胡萝卜、火腿肠、菠菜、猪肉松。</p>
+                        </div>
+                    </div>
+                </a>
+                <a class="card" href="#!">
+                    <div class="front" style="background-image: url(image/korea/food/17.jpg);">
+                        <p>비빔밥<br>拌饭</p>
+                    </div>
+                    <div class="back">
+                        <div>
+                            <p><b>비빔밥<br>拌饭</b></p>
+                            <p>韩国拌饭，蕴涵着“五行五脏五色”的原理。其中以“全州拌饭”、“晋州拌饭”最为有名。全州拌饭用的是全罗道的淳昌糯米辣椒酱,品质很高。</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a class="card" href="#!">
+                    <div class="front" style="background-image: url(image/korea/food/6.jpg);">
+                        <p>김치<br>泡菜</p>
+                    </div>
+                    <div class="back">
+                        <div>
+                            <p><b>김치<br>泡菜</b></p>
+                            <p>“韩国泡菜”是朝鲜半岛一种以蔬菜为主要原料的发酵食品。韩国泡菜食后五味俱全，可佐饭，可佐酒，易消化，爽胃口。</p>
+                        </div>
+                    </div>
+                </a>
+                <a class="card" href="#!">
+                    <div class="front" style="background-image: url(image/korea/food/15.jpg);">
+                        <p>순대<br>米肠</p>
+                    </div>
+                    <div class="back">
+                        <div>
+                            <p><b>순대<br>米肠</b></p>
+                            <p>韩国米肠是朝鲜民族传统特色美食，由洗干净的猪肠 、绿豆芽、 菜帮、 糯米 、猪血拌制作而成，味道咸鲜，好吃而不油腻，起源于朝鲜半岛。</p>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+        </div>
 
 
 
-<div id="photo2"><a href="#" target="_blank"></a></div>
+        <div id="photo2"><a href="#" target="_blank"></a></div>
 
-<a name="p"></a>
-<div class="third">
-
-
-
-</div>
-<div id="footer">
-	<a href="#">《광화멘》BACK TO TOP</a>
-</div>
-</div>
+        <a name="p"></a>
+        <div class="third">
+        </div>
+        <div id="footer">
+            <a href="#">《광화멘》BACK TO TOP</a>
+        </div>
+    </div>
 </body>
 </html>

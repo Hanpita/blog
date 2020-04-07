@@ -1,76 +1,96 @@
-    #nav                           /*导航栏初始样式*/
-	{
-		height: 70px;
-    	width: 100%;
-		position: fixed;
-		z-index: 999;
-		top: 0;
-		background-color:black;
-		padding-left: 70px;
-	}
-	#nav ul li                    /*li初始样式*/
-	{
-		float:left;
-		margin-left:50px;
-		list-style-type:none;
-		padding-top: 10px;
-		transition: background-color 0.4s linear;
-	}
-	
-	#nav>ul>li>a                  /*一级链接字体初始样式*/
-	{
-		font-size:30px;
-		font-weight: bolder;
-		font-family: Helvetica Regular,sans-serif;
-		text-decoration: none;
-		color:rgba(114,0,1,1.00);
-		transition:color 0.4s linear;
-	}
+/*导航栏初始样式*/
+nav {
+    height: 100px;
+    background-color: black;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    -webkit-transition: ease 0.5s;
+    -moz-transition: ease 0.5s;
+    transition: ease 0.5s;
+    padding-left: 30px;
+    /*垂直居中*/
+    display: flex;
+    align-items: center;
+}
+
+    nav.scrolled {
+        height: 50px !important;
+    }
+
+    #nav-info {
+    height: 30px;
+    }
+
+    #nav-info > ul {
+        padding: 0;
+        margin: 0;
+    }
     
-	/*一级菜单栏显示样式*/ 
-	#nav>ul>li:hover         /*hover一级菜单li*/
-	{
-		background-color:rgba(70, 0, 183, 0.88);	  /*一级区域最终色*/
-		//background-color: rgba(114,0,1,1.00);
-	}
-	#nav>ul>li:hover a       /*hover一级菜单li*/
-	{
-		color:white;       /*一级链接字体最终色*/
-		
-	}
-	
-	 /*二级菜单栏显示样式*/
-	#nav>ul>li>ul            /*位置*/
-	{
-		position:relative;
-		left:10px;
-		top:15px;
-	}
-	#nav>ul>li>ul>li     /*不显示、底色*/
-	{
-		clear: both;
-		display:none;
-		background-color:black;
-		width:120px;
-		text-align: center; 
-	}
-	/*鼠标放在一级菜单时显示二级菜单栏*/
-	#nav>ul>li:hover ul>li   
-	{
-		display:block;  
-	}
-	#nav>ul>li>ul>li>a   /*二级链接*/ 
-	{
-		font-size:30px;
-		font-weight:100;
-		text-decoration: none;
-		color:white;
-		//color: rgba(114,0,1,1.00);
-	}
-	/*子栏目列表鼠标经过样式*/
-	#nav>ul>li>ul>li:hover 
-	{
-		background-color:#4500B7;
-		//background-color: rgba(114,0,1,1.00);
-		//background-color:white;
-	}
+    /*li初始样式*/
+    #nav-info ul li  {
+        float: left;
+        margin-left: 50px;
+        list-style-type: none;
+        transition: background-color 0.4s linear;
+    }
+
+    /*一级链接字体初始样式*/
+    #nav-info > ul > li > a  {
+        font-size: 30px;
+        font-weight: bolder;
+        font-family: Helvetica Regular,sans-serif;
+        text-decoration: none;
+        color: rgba(114,0,1,1.00);
+        transition: color 0.4s linear;
+    }
+    /*一级菜单栏显示样式*/
+    #nav-info > ul > li:hover          /*hover一级菜单li*/ 
+    {
+        //background-color: rgba(70, 0, 183, 0.88); 
+        background-color:rgba(114,0,1,1.00);         /*一级区域最终色*/
+    }
+
+    #nav-info > ul > li:hover 
+    .hover_color /*hover一级菜单li*/ {
+            color: white;            /*一级链接字体最终色*/
+    }
+
+    /*二级菜单栏显示样式*/
+    #nav-info > ul > li > ul /*位置*/ {
+        position: relative;
+        left: 10px;
+        top: 15px;      
+    }
+
+        #nav-info > ul > li > ul > li /*不显示、底色*/ {
+            clear: both;
+            display: none;
+            background-color: white;
+            color: black;
+            width: 120px;
+            text-align: center;
+        }
+    /*鼠标放在一级菜单时显示二级菜单栏*/
+    #nav-info > ul > li:hover ul > li {
+        display: block;
+    }
+
+    #nav-info > ul > li > ul > li > a /*二级链接*/ {
+        font-size: 30px;
+        font-weight: 100;
+        text-decoration: none;
+        //color: white;
+        color: rgba(114,0,1,1.00);
+    }
+    /*子栏目列表鼠标经过样式*/
+    #nav-info > ul > li > ul > li:hover {
+        border-left:5px solid white;
+        border-right:5px solid white;
+        background-color:rgba(114,0,1,1.00)
+    }
+    #nav-info > ul > li > ul > li:hover a{
+        color:white;
+    }
