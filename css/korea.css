@@ -51,18 +51,18 @@ body {
 		background-size:cover;
 	}
 	.third{
-        width:100vw;
+        	width:100vw;
 		height:450px;
 		background-color:rgba(121,0,231,1.00);
 		background-size:contain;
 		background-image: url(../image/korea/00.jpg);
 	}
-    #food0{
+        #food0{
 		position:relative;
 	}
 	#show              
 	{
-        position:absolute;
+       		position:absolute;
 		font-size:80px;
 		font-weight: bolder;
 		text-decoration: none;
@@ -73,17 +73,17 @@ body {
 	}
 	.bg1{
 		height:500px;
-        -webkit-transition:1.5s ease;
-        -moz-transition:1.5s ease;
-        -o-transition:1.5s ease;
-        transition:1.5s ease;
-        background-image:url(../image/korea/3.jpg);
-        opacity:0;
-        background-size:cover;
+        	-webkit-transition:1.5s ease;
+        	-moz-transition:1.5s ease;
+        	-o-transition:1.5s ease;
+        	transition:1.5s ease;
+        	background-image:url(../image/korea/3.jpg);
+        	opacity:0;
+        	background-size:cover;
 	}
 	.bg1:hover{
 		height:500px;
-        opacity:1;
+        	opacity:1;
 		background-size:cover;
 	}
 
@@ -99,7 +99,7 @@ body {
 		margin-top:50px;
 	}
 	#photo1{
-        width:100vw;
+        	width:100vw;
 		height:50vh;
 		background-attachment:fixed;
 		z-index: -999;
@@ -124,30 +124,40 @@ body {
 		 filter:alpha(Opacity=80);
 		-moz-opacity:0.8;opacity: 0.8;
 	}
+
+	#video {
+    		height: 950px;
+    		margin-top: 20px;
+    		background-color: black;
+	}
+	#vlog {
+    		margin: auto;
+   	 	width: 1100px;
+	}
     
-    #footer {
-        position:relative;
-        background:no-repeat fixed bottom;
-        background-size: 100%;
-        width: 100%;
+    	#footer {
+        	position:relative;
+        	background:no-repeat fixed bottom;
+        	background-size: 100%;
+        	width: 100%;
   		height: 0;
-        padding-bottom: 50%;
-        overflow: hidden;
-        background-image: url(../image/korea/11.jpg);
-    }
-    #footer a{
-        position:absolute;
+        	padding-bottom: 50%;
+        	overflow: hidden;
+        	background-image: url(../image/korea/11.jpg);
+    	}
+    	#footer a{
+        	position:absolute;
 		font-family: Helvetica Regular,sans-serif;
 		color: rgba(114,0,1,1.00);
 		font-size:2vw;
 		font-weight: bold;
 		text-decoration:none;
-        top:20%;
-        transition:0.6s ease;
+        	top:20%;
+        	transition:0.6s ease;
 	}
-    #footer a:hover{
-        background-color:rgba(114,0,1,1.00);
-        color:white;
+    	#footer a:hover{
+        	background-color:rgba(114,0,1,1.00);
+        	color:white;
 	}
 
 	.medium{
